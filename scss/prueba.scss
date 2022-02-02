@@ -1,5 +1,6 @@
     /*css del body*/
-    $fontParrafos: Varela Round;
+    @import "variables.scss";
+
 
 
     *{
@@ -16,13 +17,13 @@
         background-size: cover;
         height: 25vh;
         
-            h1{
-                color: #cbf7bda2;
-                font-size: 80px;
-                text-align: center;
-                text-shadow: 8px 8px 8px black;
-                height: 100%;
-            }
+        h1{
+            color: #cbf7bda2;
+            font-size: 80px;
+            text-align: center;
+            text-shadow: 8px 8px 8px black;
+            height: 100%;
+        }
     }
     
         /*css del nav*/
@@ -178,11 +179,12 @@
         height: 100%;
         padding: 10px 15px 0 15px;
         align-items: center;
+        &:hover{
+            filter: none;
+            transform: none;
+        }
     }
-    .imgns:hover{
-        filter: none;
-        transform: none;
-    }
+  
     .textns{
         font-family:$fontParrafos ;
         font-size: 3em;
@@ -255,17 +257,13 @@
     }
     aside{
         grid-area: hijo6;
-        padding: 30px 30px 30px 30px;
+        
     }
     
     .Vectores{
         height: 100px;
         width: 100px;
     }
-    
-     .spotify{
-         padding: 0 30px 30px 0;  
-     }
     
     p{
         color: bisque;
@@ -383,6 +381,7 @@
        }
         aside{
             grid-area: mobile3;
+            border: 9.6px 9.6px 9.6px 9.6px white ;
     
         }
     /*media del footer*/
@@ -429,5 +428,6 @@
         .textns{
             font-size: 1.5em;
         }
+       
     }
     

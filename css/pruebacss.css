@@ -143,10 +143,9 @@ div img:hover {
   height: 100%;
   padding: 10px 15px 0 15px;
   align-items: center; }
-
-.imgns:hover {
-  filter: none;
-  transform: none; }
+  .imgns:hover {
+    filter: none;
+    transform: none; }
 
 .textns {
   font-family: Varela Round;
@@ -205,15 +204,11 @@ article {
   padding: 10px 15px 0 15px; }
 
 aside {
-  grid-area: hijo6;
-  padding: 30px 30px 30px 30px; }
+  grid-area: hijo6; }
 
 .Vectores {
   height: 100px;
   width: 100px; }
-
-.spotify {
-  padding: 0 30px 30px 0; }
 
 p {
   color: bisque; }
@@ -305,7 +300,8 @@ div ul li {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 'hijo3' 'hijo4' 'hijo5'; }
   aside {
-    grid-area: mobile3; }
+    grid-area: mobile3;
+    border: 9.6px 9.6px 9.6px 9.6px white; }
   /*media del footer*/
   .ul-footer {
     font-size: 15px; }
