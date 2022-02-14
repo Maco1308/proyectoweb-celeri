@@ -5,7 +5,11 @@
         font-size: $tamanoFuente;
         text-shadow: $sombraLetras;
     }
-
+    @mixin vectorRedes {
+        width: 150px;
+        height: 150px;
+        margin: 20px 20px 20px;
+    }
 
     *{
         margin: 0px;
@@ -113,7 +117,7 @@
     
         /*css del main trabajos*/
     
-    .divMurales{
+    .divCarteleria{
         grid-area: divmurales;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -123,12 +127,8 @@
         grid-auto-flow: dense;
     }
     
-    .divCarteleria{
-        @extend .divMurales;
-    }
-    
     .divCuadros{
-        @extend .divMurales;
+        @extend .divCarteleria;
     }
     
     .h2Trabajos{
@@ -136,10 +136,13 @@
         width: 100%;
         display: inline-block;
         text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
     } /*h2 del main trabajos*/
     
     div{
         img{
+            border-radius: 20px;
             &:hover {
                 filter: opacity(0.9);
                 transform: scale(1.04);
@@ -239,10 +242,12 @@
     }
     aside{
         grid-area: hijo6;
-        
+        iframe{
+            padding: 0 20px 0 20px;
+        }
     }
     
-    .Vectores, .facebook, .instagram, .whatsapp{
+    .Vectores{
         height: 100px;
         width: 100px;
     }
@@ -276,6 +281,15 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+    .facebook{
+        @include vectorRedes;
+    }
+    .instagram{
+        @extend .facebook;
+    }
+    .whatsapp{
+        @extend .facebook;
     }
 
 
@@ -326,7 +340,7 @@
             height: 15vh;
         
             h1{
-                font-size: 63px;
+                font-size: 45px;
                 text-align: center;
                 font-family:roboto;
                 height: 100%;
@@ -405,10 +419,8 @@
             text-align: center;
         }
         .H2{
+            @include titulos( white, 40px, 5px 5px 5px red );
             width: 60%;
-            font-size: 40px;
-            color: white;
-            text-shadow: 5px 5px 5px red;
             text-align: center;
         
         }
@@ -426,6 +438,19 @@
         .textns{
             font-size: 1.5em;
         }
+        /* css de Redes---*/
+        .h2Redes{
+            @include titulos(white, 40px, none);
+            text-align: center;
+            padding: 20px 0 20px 0;
+        }
+        .main_redes{
+            flex-direction: column;
+        }
+        .facebook{
+            margin: 20px 0 50px 0;
+        }
+        
        
     }
     

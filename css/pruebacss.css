@@ -88,7 +88,7 @@ form {
     text-align: center; }
 
 /*css del main trabajos*/
-.divMurales, .divCarteleria, .divCuadros {
+.divCarteleria, .divCuadros {
   grid-area: divmurales;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -103,12 +103,16 @@ form {
   text-shadow: 2px 2px 2px #f5e7e7;
   width: 100%;
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 /*h2 del main trabajos*/
-div img:hover {
-  filter: opacity(0.9);
-  transform: scale(1.04); }
+div img {
+  border-radius: 20px; }
+  div img:hover {
+    filter: opacity(0.9);
+    transform: scale(1.04); }
 
 .imgCarousel {
   padding-left: 15%;
@@ -185,8 +189,10 @@ article {
 
 aside {
   grid-area: hijo6; }
+  aside iframe {
+    padding: 0 20px 0 20px; }
 
-.Vectores, .facebook, .instagram, .whatsapp {
+.Vectores {
   height: 100px;
   width: 100px; }
 
@@ -219,6 +225,11 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center; }
+
+.facebook, .instagram, .whatsapp {
+  width: 150px;
+  height: 150px;
+  margin: 20px 20px 20px; }
 
 /*css del footer*/
 footer {
@@ -259,7 +270,7 @@ div ul li {
     background-image: url(../img/fotoheader.jpg);
     height: 15vh; }
     .mobileH h1 {
-      font-size: 63px;
+      font-size: 45px;
       text-align: center;
       font-family: roboto;
       height: 100%;
@@ -313,10 +324,10 @@ div ul li {
     font-size: 50px;
     text-align: center; }
   .H2 {
-    width: 60%;
-    font-size: 40px;
     color: white;
+    font-size: 40px;
     text-shadow: 5px 5px 5px red;
+    width: 60%;
     text-align: center; }
   .divHijo {
     display: grid; }
@@ -325,4 +336,15 @@ div ul li {
   #Email {
     height: 40px; }
   .textns {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+  /* css de Redes---*/
+  .h2Redes {
+    color: white;
+    font-size: 40px;
+    text-shadow: none;
+    text-align: center;
+    padding: 20px 0 20px 0; }
+  .main_redes {
+    flex-direction: column; }
+  .facebook, .instagram, .whatsapp {
+    margin: 20px 0 50px 0; } }
