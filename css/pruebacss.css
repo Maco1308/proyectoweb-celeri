@@ -9,13 +9,23 @@ header {
   background-color: #060706b9;
   background-image: url(../img/fotoheader.jpg);
   background-size: cover;
-  height: 25vh; }
+  height: 25vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+  header .imgHeader {
+    height: 100px;
+    width: 100px;
+    border-radius: 80px;
+    transition: all 0.5s ease; }
+    header .imgHeader:hover {
+      transform: scale(0.9); }
   header h1 {
     color: #cbf7bda2;
     font-size: 80px;
     text-shadow: 8px 8px 8px black;
-    text-align: center;
-    height: 100%; }
+    text-align: center; }
 
 /*css del nav*/
 nav {
@@ -265,7 +275,7 @@ div ul li {
   .mobileH {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: white;
     background-image: url(../img/fotoheader.jpg);
     height: 15vh; }
@@ -276,6 +286,9 @@ div ul li {
       height: 100%;
       display: grid;
       align-items: center; }
+    .mobileH .imgHeader {
+      height: 80px;
+      width: 80px; }
   /*media del Nav*/
   #NavMobile {
     height: 50%;
@@ -297,9 +310,9 @@ div ul li {
     grid-area: mobile1;
     display: inline; }
   .primer-h2 {
+    color: #562323;
     font-size: 50px;
-    text-shadow: 3px 3px 3px white;
-    color: #562323; }
+    text-shadow: 3px 3px 3px white; }
   section {
     grid-area: mobile2;
     display: grid;
@@ -321,7 +334,7 @@ div ul li {
     height: 100%;
     width: 100%; }
   .h2Trabajos {
-    font-size: 50px;
+    font-size: 45px;
     text-align: center; }
   .H2 {
     color: white;
@@ -348,3 +361,14 @@ div ul li {
     flex-direction: column; }
   .facebook, .instagram, .whatsapp {
     margin: 20px 0 50px 0; } }
+
+@media only screen and (max-width: 500px) {
+  /*------media del Home---*/
+  .primer-h2 {
+    color: #562323;
+    font-size: 35px;
+    text-shadow: 3px 3px 3px white; }
+  .h3Vectores {
+    color: red;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px white; } }

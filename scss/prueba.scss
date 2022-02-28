@@ -24,12 +24,26 @@
         background-image: url(../img/fotoheader.jpg);
         background-size: cover;
         height: 25vh;
-        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        .imgHeader{
+            height: 100px;
+            width: 100px;
+            border-radius: 80px;
+            transition: all 0.5s ease;
+            &:hover{
+                transform: scale(0.9);
+            }
+
+        }
         h1{
             @include titulos(#cbf7bda2, 80px, 8px 8px 8px black);
             text-align: center;
-            height: 100%;
         }
+
     }
     
         /*css del nav*/
@@ -334,7 +348,7 @@
         .mobileH{
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-evenly;
             background-color: white;
             background-image: url(../img/fotoheader.jpg);
             height: 15vh;
@@ -346,6 +360,10 @@
                 height: 100%;
                 display:grid;
                 align-items: center;
+            }
+            .imgHeader{
+                height: 80px;
+                width: 80px;
             }
         }
         
@@ -361,7 +379,7 @@
         }
     /*media del main Home*/   
         #MainHome{
-            background: black;
+            background: rgb(0, 0, 0);
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr 1fr;
@@ -377,9 +395,7 @@
         }
 
        .primer-h2{
-           font-size: 50px;
-           text-shadow: 3px 3px 3px white;
-           color: rgb(86, 35, 35);
+           @include titulos(rgb(86, 35, 35), 50px, 3px 3px 3px white);
        }
 
        section{
@@ -415,7 +431,7 @@
         }
     
         .h2Trabajos{
-            font-size: 50px;
+            font-size: 45px;
             text-align: center;
         }
         .H2{
@@ -454,3 +470,15 @@
        
     }
     
+    @media only screen and (max-width:500px){
+
+        /*------media del Home---*/
+        .primer-h2{
+            @include titulos(rgb(86, 35, 35), 35px,3px 3px 3px white);
+        }
+
+        .h3Vectores{
+            @include titulos(red, 25px , 2px 2px 2px white );
+        }
+     
+    }
